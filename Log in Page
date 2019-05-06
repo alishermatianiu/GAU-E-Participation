@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GAU E-Participation</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="loginpage">
+	<img src="gaulogo.png" alt="GAU-LOGO" width="120" height="120"> <br>
+
+	<input id="input" name="email" type="text" placeholder="E-mail"> <br><br>
+	<input id="input" name="password" type="password" placeholder="Password"> <br><br>
+
+	<button id="btn" ><a href="studentRegPage.html" type="button" style="text-decoration: none">Sign Up</a></button>
+	<button id="btn">Log in</button>
+</div>
+
+</body>
+</html>
