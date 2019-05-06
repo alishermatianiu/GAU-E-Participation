@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+        rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.0/css/mdb.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Gugi|Montserrat" rel="stylesheet">
+</head>
+
+<style>
+
+    body {
+        background: #fe8c00; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #f83600, #fe8c00); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #f83600, #fe8c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    .main-container {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        
+    }
+
+    .manager-section {
+        background: white;
+    }
+    .student-section {
+        background: white;
+    }
+
+    .title1 {
+        height: 75px;
+        font-family: Gugi;
+        justify-content: center;
+        align-content: center;
+        display: flex;
+        font-size: x-large;
+        padding-top: 25px;
+    }
+
+        .title2 {
+            display: flex;
+        }
+
+</style>
+
+<body>
+    <img src="/gau_logo_kartal.png" alt="" style="height:60px !important" class="title2 ml-auto mr-auto mt-4">
+    <div class="title1">
+        <span>GAU E-Participation</span></div>
+    <div class="container mt-4" id="main-container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-4 manager-section">
+                <!-- Default form login -->
+                <form class="text-center border border-light p-5">
+
+                    <p class="h4 mb-4">Login as Manager</p>
+
+                    <!-- Email -->
+                    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+                    <!-- Password -->
+                    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4"
+                        placeholder="Password">
+
+                    <!-- Sign in button -->
+                    <button class="btn btn-success btn-block my-4" type="submit">Sign in</button>
+
+                    <!-- Register -->
+                    <p>Not a member?
+                        <a href="">Register</a>
+                    </p>
+
+                </form>
+                <!-- Default form login -->
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-4 student-section">
+                <!-- Default form login -->
+                <form class="text-center border border-light p-5">
+
+                    <p class="h4 mb-4">Login as Student</p>
+
+                    <!-- Email -->
+                    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+                    <!-- Password -->
+                    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4"
+                        placeholder="Password">
+
+
+                    <!-- Sign in button -->
+                    <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+
+                    <!-- Register -->
+                    <p>Not a member?
+                        <a href="">Register</a>
+                    </p>
+
+
+                </form>
+                <!-- Default form login -->
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

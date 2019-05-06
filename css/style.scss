@@ -1,0 +1,44 @@
+$body-bg : #dddddd;
+$title-bg : #797142;
+
+@mixin centerContent {
+    justify-content: center;
+    align-content: center;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+body {
+    background: $body-bg;
+
+    #big-header {
+        font-family: Gugi;
+        font-size: 2rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    #textBox {
+        @include centerContent();
+        background-color: #afb2b3;
+        // height: 50vh;
+        border-radius: 0.5%;
+    }
+
+    #petitionBoddy {
+        opacity: 1;
+
+    }
+
+    h3{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+}
+
