@@ -1,48 +1,72 @@
-* {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-}
-
+/* common css */
 body {
-  background: #dddddd;
+  background-color: #f7f7f7;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 }
-
-body #big-header {
-  font-family: Gugi;
-  font-size: 2rem;
+.modal-content, .form-control, .btn{
+  border-radius: 3px;
+}
+label{
+  font-weight: 400;
+  font-size: 16px;
+}
+.form-control{
+  height: 42px;
+  font-size: 17px;
+}
+.form-control:focus {
+  z-index: 2;
+}
+.alert{
+    border-radius: 3px;
+}
+/* login form css */
+#login_form {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+#login_form .form-control {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
 }
 
-body #textBox {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  background-color: #afb2b3;
-  border-radius: 0.5%;
+#login_form input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+#login_form input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+#display_error{
+	display: none;
+}
+.modal-backdrop.fade
+{
+  opacity:0.9;
+}
+.fade:not(.show)
+{
+  opacity: 0.9;
 }
 
-body #petitionBoddy {
-  opacity: 1;
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
 }
-
-body h3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+.alert-danger hr {
+  border-top-color: #e4b9c0;
 }
-/*# sourceMappingURL=style.css.map */
+.alert-danger .alert-link {
+  color: #843534;
+}
