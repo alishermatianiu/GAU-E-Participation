@@ -1,0 +1,102 @@
+#body{
+	background: #f2f2f2;
+	font-family:georgia,garamond,serif;font-size:20px;font-style:;"
+
+}
+
+#btn { 
+  font-family: ;
+  font-size: 20px;
+  color: purple;
+
+  border-radius: 4px;
+  border-color:orange;
+  background: orange;
+}
+a:active {
+color: white;
+
+}
+
+#input{ 
+  font-size: 20px;
+  text-align: center;
+  border-radius: 3px;
+}
+div.loginpage{
+	text-align: center;	
+  	padding: 100px;	
+
+}
+div.stdRegPage{
+	text-align: center;	
+  	padding: 50px;	
+}
+
+div.addmngPage{
+	text-align: center;	
+  	padding: 100px;	
+}
+
+div.createPetiPage{
+	text-align: center;	
+  	padding: 50px;	
+}
+
+div.replyPetiPage{
+	text-align: center;	
+  	padding: 30px;	  	
+}
+
+div.StudentViewreplyPage{
+	text-align: center;	
+  	padding: 30px;	  	
+}
+
+
+
+div.mgtDashboardPage{
+	text-align: center;	
+  	padding: 50px;	
+}
+
+
+div.header{
+	text-align: right;	
+  	padding: 10px;	
+  	background: #21274f;
+}
+
+div.footer{
+	
+	
+	position: relative;
+	bottom: 0;
+  		
+  	padding: 20px 0px 0px 30px; <!--top,right,bottom,left -->
+  	overflow: hidden;
+  	
+}
+
+#rcorners1 {
+  border-radius: 25px;   
+}
+
+
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}

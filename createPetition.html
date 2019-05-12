@@ -1,94 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.0/css/mdb.min.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Gugi|Montserrat" rel="stylesheet">
-
-    <title>Create Petition</title>
+<title>GAU E-Participation</title>
+<link rel="stylesheet" href="styles.css">
 </head>
-<body>
-<!--Header-->
-<nav class="navbar navbar-expand-lg navbar-dark grey darken-3">
-    
-    <p class="navbar-brand m-auto" id="big-header" href="#">GAU E-Participation</p>
+<body id="body">
 
-</nav>
-<!--/Header-->
-<!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark grey darken-1 mb-3">
 
-    <!-- Collapse button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<div class="header">
+	<button id="btn"><a href="index.html" type="button" style="text-decoration: none">Log Out</a></button>
+</div>
 
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="basicExampleNav">
+<div class="createPetiPage">
+	<img src="gaulogo.png" alt="GAU-LOGO" width="110" height="160"> <br>
 
-        <!-- Links -->
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home
-                </a>
-            </li>
-            <li>
-                <a class="nav-link" href="#">Profile</a>
-            </li>
-            <li>
-            </li>
-            
-        </ul>
-        <!-- Links -->
-        
-        <form class="form-inline">
-            <div class="md-form my-0">
-                    <button class="nav-link btn btn-sm btn-danger ml-auto">Sign Out</button>
-            </div>
-        </form>
-    </div>
-    <!-- Collapsible content -->
 
-</nav>
-<!--/.Navbar-->
-    <div class="container">
-            <div class="row" id="textBox">
-                <form class="col-md-6 form-group">
-                    <p class="justify-content-center">Petition:</p>
-                    <label>Subject</label>
-                    <select class="browser-default custom-select mb-4">
-                        <option value="" disabled>Choose option</option>
-                        <option value="1" selected>Feedback</option>
-                        <option value="2">Report a bug</option>
-                        <option value="3">Feature request</option>
-                        <option value="4">Feature request</option>
-                    </select>
-                    <textarea name="petition-body" id="petitionBoddy" cols="30" rows="5" class="form-control" placeholder="Write your text here..."></textarea>
-                    <!-- Checkbox -->
-                    <div class="custom-control custom-checkbox mb-2 mt-2">
-                        <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
-                        <label class="custom-control-label font-weight-light" for="defaultContactFormCopy">Make this petition private</label>
-                    </div>
-                    <input type="submit" name="submitBtn" id="submitBTN" class="btn btn-sm ml-auto btn-success">
-                </form>
-                
-            </div>
-    </div>
-    <!-- <div class="title-header">
-        <h3>Petition</h3>
-    </div> -->
+	<textarea rows="1" cols="25" maxlength="40" name="title" placeholder="Title" style="text-align: center;font-size: 16px" ></textarea> <br><br>
+
+	Type:
+	<select>
+  	<option value="pet">Petition</option>
+  	<option value="pro">Problem</option>
+  	</select>
+
+  	Category: 
+	<select>
+  	<option value="pet">A</option>
+  	<option value="pro">B</option>
+  	</select>
+
+  	<br><br>
+
+  	<textarea rows="10" cols="50" maxlength="100" name="msg" placeholder="Message" style="text-align: center;font-size: 16px"></textarea>
+	
+	<br><br>	
+	<button id="btn">Send</button>
+	<button id="btn" ><a href="StudentDashboard.html" type="button" style="text-decoration: none">Back</a></button>	
+	
+	</div>
+
+<div class="footer">
+	<p id="input" style="color:grey;font-size:15px">©2019, GAU E-participation. All Rights Reserved.</p>	
+</div>
+
 </body>
 </html>
