@@ -46,7 +46,7 @@ Id	 	INT AUTO_INCREMENT,
 Body		VARCHAR(1000) NOT NULL,
 Attachment	INT,
 Status		CHAR,
-PRIMARY KEY(Id, Student, Date_Time),
+PRIMARY KEY(Id),
 FOREIGN KEY(Student) REFERENCES Student(Email),
 FOREIGN KEY(Attachment) REFERENCES Attachment(Id)
 );
