@@ -1,0 +1,97 @@
+CREATE TABLE Administrator(
+Email		VARCHAR(50),
+Password	VARCHAR(50) NOT NULL,
+PRIMARY KEY(Email)
+);
+
+CREATE TABLE Student(
+Email	 	VARCHAR(50),
+Password	VARCHAR(50) NOT NULL,
+Name		VARCHAR(20) NOT NULL,
+Surname		VARCHAR(20) NOT NULL,
+PRIMARY KEY(Email)
+);
+
+CREATE TABLE Problem_Category(
+Id	 	INT AUTO_INCREMENT,
+Category	VARCHAR(30) NOT NULL,
+PRIMARY KEY(Id)
+);
+
+CREATE TABLE Category_Manager(
+Email	 	VARCHAR(50),
+Password	VARCHAR(50) NOT NULL,
+Name		VARCHAR(20) NOT NULL,
+Surname		VARCHAR(20) NOT NULL,
+Admin		VARCHAR(50) NOT NULL,
+Category	INT,
+PRIMARY KEY(Email),
+FOREIGN KEY(Admin) REFERENCES Administrator(Email),
+FOREIGN KEY(Category) REFERENCES Problem_Category(Id)
+);
+
+
+CREATE TABLE Attachment(
+Id	INT AUTO_INCREMENT,
+Link	VARCHAR(100),
+PRIMARY KEY(Id)
+);
+
+CREATE TABLE Problem(
+Student		VARCHAR(50),
+Date_Time	DATETIME,
+Id	 	INT AUTO_INCREMENT,
+Body		VARCHAR(1000) NOT NULL,
+Attachment	INT,
+Status		CHAR,
+PRIMARY KEY(Id, Student, Date_Time),
+FOREIGN KEY(Student) REFERENCES Student(Email),
+FOREIGN KEY(Attachment) REFERENCES Attachment(Id)
+);
+
+CREATE TABLE Reply(
+Problem		INT,
+Date_Time	DATETIME,
+Id	 	INT AUTO_INCREMENT,
+Body		VARCHAR(1000) NOT NULL,
+Attachment	INT,
+Replier		VARCHAR(50) NOT NULL,
+PRIMARY KEY(Id, Problem, Date_Time),
+FOREIGN KEY(Problem) REFERENCES Problem(Id),
+FOREIGN KEY(Attachment) REFERENCES Attachment(Id)
+);
+
+CREATE TABLE Category_Problem(
+Id	 	INT AUTO_INCREMENT,
+Category	INT,
+Problem 	INT,
+PRIMARY KEY(Id, Category, Problem),
+FOREIGN KEY(Category) REFERENCES Problem_Category(Id),
+FOREIGN KEY(Problem) REFERENCES Problem(Id)
+);
+
+
+
+
+
+
+
+INSERT INTO Administrator VALUES('administrator@gau.edu.tr', '112233');
+
+INSERT INTO Student VALUES('rose.wilson@std.gau.edu.tr', 'rose', 'Rose', 'Wilson');
+INSERT INTO Student VALUES('hot.pepper@std.gau.edu.tr', 'hot', 'Hot', 'Pepper');
+INSERT INTO Student VALUES('jack.lumber@std.gau.edu.tr', 'jack', 'Jack', 'Lumber');
+INSERT INTO Student VALUES('tony.bridgers@std.gau.edu.tr', 'tony', 'Tony', 'Bridgers');
+INSERT INTO Student VALUES('gwen.wolfe@std.gau.edu.tr', 'gwen', 'Gwen', 'Wolfe');
+INSERT INTO Student VALUES('sandy.mctrevor@std.gau.edu.tr', 'sandy', 'Sandy', 'McTrevor');
+
+INSERT INTO Problem_Category(Category) VALUES('Equipment');
+INSERT INTO Problem_Category(Category) VALUES('Discipline');
+INSERT INTO Problem_Category(Category) VALUES('Education');
+INSERT INTO Problem_Category(Category) VALUES('Student Clubs');
+
+INSERT INTO Category_Manager VALUES('vin.gasoline@gau.edu.tr', 'gasoline', 'Vin', 'Gasoline', 'administrator@gau.edu.tr', 1);
+INSERT INTO Category_Manager VALUES('will.ashley@gau.edu.tr', 'ashley', 'Will', 'Ashley', 'administrator@gau.edu.tr', 2);
+INSERT INTO Category_Manager VALUES('rachel.thompson@gau.edu.tr', 'thompson', 'Rachel', 'Thompson', 'administrator@gau.edu.tr', 3);
+INSERT INTO Category_Manager VALUES('linda.crider@gau.edu.tr', 'crider', 'Linda', 'Crider', 'administrator@gau.edu.tr', 4);
+
