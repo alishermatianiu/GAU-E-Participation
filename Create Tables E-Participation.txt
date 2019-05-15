@@ -5,6 +5,7 @@ PRIMARY KEY(Email)
 );
 
 CREATE TABLE Student(
+user_id		INT(58)	    NOT NULL,
 Email	 	VARCHAR(50),
 Password	VARCHAR(50) NOT NULL,
 Name		VARCHAR(20) NOT NULL,
@@ -19,6 +20,7 @@ PRIMARY KEY(Id)
 );
 
 CREATE TABLE Category_Manager(
+user_id		INT(11)	    NOT NULL,
 Email	 	VARCHAR(50),
 Password	VARCHAR(50) NOT NULL,
 Name		VARCHAR(20) NOT NULL,
