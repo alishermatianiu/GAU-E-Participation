@@ -1,0 +1,84 @@
+<template>
+
+<div data-name="create-petition" class="page">
+
+        <!-- Top Navbar -->
+        <div class="navbar">
+            <div class="navbar-inner">
+
+                <div class="title">Create Petition</div>
+            </div>
+        </div>
+
+        <!-- Bottom Toolbar -->
+        <div class="toolbar toolbar-bottom">
+            <div class="toolbar-inner">
+                <!-- Toolbar links -->
+                <a href="#" onclick="sendPetition()" class="link" style="background-color:orange;">Send Petition</a>
+            </div>
+        </div>
+
+        <!-- Scrollable page content -->
+        <div class="page-content">
+            <br>
+            <br>
+            <br>
+
+            <div class="block">
+                <form class="list" id="petition-form">
+                    <ul>
+                        <li>
+                            <div class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-title item-label">Subject</div>
+                                    <div class="item-input-wrap">
+                                        <select name="category">
+                                            <option value="0" selected> == Select == </option>
+                                            {{#each category}}
+                                            <option value="{{this.Id}}">{{this.Category}}</option>
+                                            {{/each}}
+
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-title item-label">Message</div>
+                                    <div class="item-input-wrap">
+                                        <textarea name="message" placeholder="Your Message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</template>
+
+<script>
+    return {
+        data: function () {
+            category =JSON.parse(data_attachs);
+            category = JSON.parse(category.category);
+            return {
+                category: category,
+            }
+        },
+        on: {
+            pageInit: function () {
+                // do something on page init
+            },
+            pageAfterOut: function () {
+                // page has left the view
+            },
+        }
+    }
+</script>
